@@ -1,0 +1,12 @@
+.fav {
+  padding: 24rpx 32rpx 48rpx;
+}
+
+.cats {
+  margin: 0 0 20rpx;
+}
+
+.fav .chip {
+  margin-right: 12rpx;
+  padding: 8rpx 22rpx;
+}

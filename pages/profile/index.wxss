@@ -1,0 +1,251 @@
+.profile {
+  padding: 12rpx 32rpx 48rpx;
+  background: #f3f8fe;
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  padding: 8rpx 4rpx 28rpx;
+}
+
+.avatar {
+  position: relative;
+  flex-shrink: 0;
+  width: 112rpx;
+  height: 112rpx;
+  margin-right: 24rpx;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 42%, #e8f5ff 0%, #b7ddfd 68%, #d7eeff 100%);
+  overflow: hidden;
+}
+
+.antenna {
+  position: absolute;
+  left: 50%;
+  top: 12rpx;
+  z-index: 3;
+  width: 12rpx;
+  height: 16rpx;
+  margin-left: -6rpx;
+  border-radius: 6rpx 6rpx 2rpx 2rpx;
+  background: #1c2f6e;
+}
+
+.hood {
+  position: absolute;
+  left: 22rpx;
+  top: 24rpx;
+  z-index: 2;
+  width: 68rpx;
+  height: 56rpx;
+  border-radius: 34rpx;
+  background: #1c2f6e;
+}
+
+.face {
+  position: absolute;
+  left: 6rpx;
+  top: 6rpx;
+  width: 56rpx;
+  height: 44rpx;
+  border-radius: 28rpx;
+  background: #ffffff;
+}
+
+.eye {
+  position: absolute;
+  top: 14rpx;
+  width: 8rpx;
+  height: 12rpx;
+  border-radius: 8rpx;
+  background: #1a1a2e;
+}
+
+.eye.left { left: 14rpx; }
+.eye.right { right: 14rpx; }
+
+.mouth {
+  position: absolute;
+  left: 50%;
+  bottom: 6rpx;
+  width: 14rpx;
+  height: 8rpx;
+  margin-left: -7rpx;
+  border-radius: 0 0 8rpx 8rpx;
+  background: #f0a070;
+}
+
+.body {
+  position: absolute;
+  left: 24rpx;
+  bottom: 10rpx;
+  z-index: 1;
+  width: 64rpx;
+  height: 34rpx;
+  border-radius: 32rpx 32rpx 18rpx 18rpx;
+  background: #2f74e8;
+}
+
+.user-text {
+  min-width: 0;
+}
+
+.name {
+  color: #15224a;
+  font-size: 36rpx;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.slogan {
+  margin-top: 8rpx;
+  color: #8fa0be;
+  font-size: 24rpx;
+  line-height: 1.4;
+}
+
+.stats {
+  display: flex;
+  gap: 20rpx;
+}
+
+.stat {
+  flex: 1;
+  padding: 28rpx 24rpx 24rpx;
+  border-radius: 28rpx;
+}
+
+.stat-head {
+  display: flex;
+  align-items: center;
+}
+
+.stat-ico {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 52rpx;
+  height: 52rpx;
+  margin-right: 16rpx;
+}
+
+.star {
+  width: 40rpx;
+  height: 40rpx;
+  background: #feb735;
+  clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+}
+
+.rec {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  width: 52rpx;
+  height: 52rpx;
+  margin-right: 16rpx;
+  border-radius: 16rpx;
+  background: #9aa4fd;
+}
+
+.rec-glyph {
+  width: 26rpx;
+  height: 18rpx;
+  box-sizing: border-box;
+  border: 3rpx solid #ffffff;
+  border-radius: 6rpx;
+}
+
+.stat-title {
+  color: #243056;
+  font-size: 30rpx;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.stat-count {
+  margin-top: 12rpx;
+  margin-left: 68rpx;
+  color: #8ea0b8;
+  font-size: 26rpx;
+  line-height: 1.2;
+}
+
+.menu {
+  margin-top: 24rpx;
+  overflow: hidden;
+}
+
+.row-btn {
+  display: block !important;
+  width: 100% !important;
+  height: auto !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  border-radius: 0 !important;
+  background: #ffffff !important;
+  line-height: 1 !important;
+  text-align: left !important;
+  font-size: 0 !important;
+  box-sizing: border-box !important;
+  color: #1f2937;
+  overflow: visible;
+}
+
+.row-btn::after {
+  display: none;
+  border: none;
+}
+
+.row-btn.row-hover {
+  background: #f3f4f6 !important;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 26rpx 28rpx;
+  background: #ffffff;
+  line-height: 1.4;
+  font-size: 28rpx;
+  color: #1f2937;
+}
+
+.row-btn .row {
+  background: transparent;
+}
+
+.glyph {
+  flex-shrink: 0;
+  width: 64rpx;
+  height: 64rpx;
+  margin-right: 20rpx;
+  border-radius: 18rpx;
+  text-align: center;
+  line-height: 64rpx;
+  font-size: 26rpx;
+  font-weight: 700;
+}
+
+.row-label {
+  flex: 1;
+  min-width: 0;
+}
+
+.extra {
+  flex-shrink: 0;
+  margin-right: 8rpx;
+  color: #9ca3af;
+  font-size: 24rpx;
+}
+
+.arrow {
+  flex-shrink: 0;
+  color: #d1d5db;
+  font-size: 36rpx;
+}

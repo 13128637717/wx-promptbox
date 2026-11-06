@@ -1,0 +1,91 @@
+.splash {
+  position: relative;
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow: hidden;
+  background: linear-gradient(180deg, #e4f1ff 0%, #f7fbff 46%, #ffffff 100%);
+}
+
+.stage {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 180rpx;
+}
+
+.logo {
+  width: 220rpx;
+  height: 220rpx;
+  border-radius: 56rpx;
+  background: linear-gradient(160deg, #6cb2ff, #2f6fed);
+  box-shadow: 0 28rpx 56rpx rgba(47, 111, 237, 0.28);
+}
+
+.name {
+  margin-top: 48rpx;
+  font-size: 48rpx;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.slogan {
+  margin-top: 16rpx;
+  color: #8b95a7;
+  font-size: 28rpx;
+  letter-spacing: 2rpx;
+}
+
+.floats {
+  position: relative;
+  width: 560rpx;
+  height: 220rpx;
+  margin-top: 72rpx;
+}
+
+.float {
+  position: absolute;
+  width: 108rpx;
+  height: 108rpx;
+  border-radius: 32rpx;
+  background: #ffffff;
+  box-shadow: 0 16rpx 36rpx rgba(37, 99, 235, 0.12);
+}
+
+.float.chat {
+  left: 24rpx;
+  top: 16rpx;
+  background: #e7fbff;
+}
+
+.float.user {
+  left: 226rpx;
+  top: 78rpx;
+  background: #e8f1ff;
+}
+
+.float.code {
+  right: 24rpx;
+  top: 8rpx;
+  background: #e9fbf1;
+}
+
+.wave {
+  position: absolute;
+  left: -18%;
+  width: 136%;
+  border-radius: 50%;
+}
+
+.wave.a {
+  bottom: 40rpx;
+  height: 280rpx;
+  background: linear-gradient(180deg, rgba(147, 197, 253, 0.28), rgba(219, 234, 254, 0.05));
+}
+
+.wave.b {
+  bottom: -80rpx;
+  height: 240rpx;
+  background: linear-gradient(180deg, rgba(96, 165, 250, 0.22), rgba(239, 246, 255, 0.4));
+}

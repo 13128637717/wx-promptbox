@@ -1,0 +1,28 @@
+<view class="page result" style="padding-top: {{statusBarHeight}}px;">
+  <view class="top">
+    <view class="nav-back" bindtap="onBack">‹</view>
+  </view>
+  <view wx:if="{{missing}}">
+    <empty-state title="没有生成结果" desc="先选择模板并填写需求" />
+  </view>
+  <block wx:else>
+    <view class="check">✓</view>
+    <view class="ok">生成成功</view>
+    <view class="sub">以下是为你生成的提示词</view>
+    <view class="sheet card">
+      <view class="sheet-head">
+        <view class="icon" style="background: {{categoryColor}};">
+          <mark name="{{categoryIcon}}" ink="#ffffff" />
+        </view>
+        <view>
+          <view class="name">{{title}}</view>
+          <text class="pill" style="color: {{categoryColor}}; background: {{categoryTint}};">{{categoryName}}</text>
+        </view>
+      </view>
+      <textarea class="body" value="{{text}}" maxlength="-1" bindinput="onText" />
+    </view>
+    <view class="btn-primary" bindtap="onCopy">复制提示词</view>
+    <view class="btn-ghost" bindtap="onSave">{{saved ? '已保存' : '保存到我的提示词'}}</view>
+    <view class="btn-ghost" bindtap="onAgain">再来一个</view>
+  </block>
+</view>

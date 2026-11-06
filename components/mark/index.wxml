@@ -1,0 +1,74 @@
+<view class="mark" style="color: {{ink}};">
+  <view wx:if="{{name === 'pencil'}}" class="pencil">
+    <view class="pen">
+      <view class="eraser"></view>
+      <view class="gap"></view>
+      <view class="shaft"></view>
+      <view class="tip"></view>
+    </view>
+  </view>
+  <view wx:elif="{{name === 'code'}}" class="code">
+    <view class="br l"></view>
+    <view class="br r"></view>
+  </view>
+  <view wx:elif="{{name === 'image'}}" class="pic">
+    <view class="sun"></view>
+    <view class="hill a"></view>
+    <view class="hill b"></view>
+  </view>
+  <view wx:elif="{{name === 'video'}}" class="vid">
+    <view class="play"></view>
+  </view>
+  <view wx:elif="{{name === 'case'}}" class="case">
+    <view class="handle"></view>
+    <view class="box"><view class="latch"></view></view>
+  </view>
+  <view wx:elif="{{name === 'cap'}}" class="cap">
+    <view class="board"></view>
+    <view class="cup"></view>
+    <view class="tassel"></view>
+  </view>
+  <view wx:elif="{{name === 'house'}}" class="house">
+    <view class="roof"></view>
+    <view class="body"><view class="door"></view></view>
+  </view>
+  <view wx:elif="{{name === 'grid'}}" class="grid4">
+    <view class="sq"></view><view class="sq"></view><view class="sq"></view><view class="sq"></view>
+  </view>
+  <view wx:elif="{{name === 'search'}}" class="find">
+    <view class="lens"></view>
+    <view class="stick"></view>
+  </view>
+  <view wx:elif="{{name === 'chat'}}" class="chat"></view>
+  <view wx:elif="{{name === 'user'}}" class="user">
+    <view class="head"></view>
+    <view class="shoulders"></view>
+  </view>
+  <view wx:elif="{{name === 'chart'}}" class="chart">
+    <view class="bar b1"></view>
+    <view class="bar b2"></view>
+    <view class="bar b3"></view>
+  </view>
+  <view wx:elif="{{name === 'cube'}}" class="cube">
+    <view class="lid"></view>
+    <view class="edge"></view>
+    <view class="front">AI</view>
+    <view class="spark">✦</view>
+    <view class="dot"></view>
+  </view>
+  <view wx:elif="{{name === 'star'}}" class="star">
+    <view wx:if="{{!solid}}" class="star-hole"></view>
+  </view>
+  <view wx:elif="{{name === 'share'}}" class="share-ico">
+    <view class="share-hook"></view>
+    <view class="share-head"></view>
+  </view>
+  <view wx:elif="{{name === 'clock'}}" class="clock">
+    <view class="hand hour"></view>
+    <view class="hand minute"></view>
+    <view class="pin"></view>
+  </view>
+  <view wx:else class="grid4">
+    <view class="sq"></view><view class="sq"></view><view class="sq"></view><view class="sq"></view>
+  </view>
+</view>

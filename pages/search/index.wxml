@@ -1,0 +1,37 @@
+<view class="page search-page">
+  <search-bar
+    wx:if="{{!featured}}"
+    value="{{keyword}}"
+    focus="{{focus}}"
+    bind:input="onInput"
+    bind:confirm="onConfirm"
+    bind:clear="onClear"
+  />
+
+  <scroll-view class="chip-row cats" scroll-x>
+    <text class="chip {{categoryId === '' ? 'on' : ''}}" data-id="" bindtap="onCategory">全部</text>
+    <text
+      wx:for="{{categories}}"
+      wx:key="id"
+      class="chip {{categoryId === item.id ? 'on' : ''}}"
+      data-id="{{item.id}}"
+      bindtap="onCategory"
+    >{{item.name}}</text>
+  </scroll-view>
+
+  <view wx:if="{{showHistory}}">
+    <view class="history-head" wx:if="{{history.length}}">
+      <text>搜索历史</text>
+      <text class="link" bindtap="onClearHistory">清空</text>
+    </view>
+    <view class="history">
+      <text wx:for="{{history}}" wx:key="*this" class="chip" data-word="{{item}}" bindtap="onHistory">{{item}}</text>
+    </view>
+    <empty-state wx:if="{{!history.length}}" title="搜索标题、正文或标签" desc="最近的搜索词会留在这里" />
+  </view>
+
+  <view wx:else class="list">
+    <prompt-card wx:for="{{list}}" wx:key="id" prompt="{{item}}" bind:select="onSelect" />
+    <empty-state wx:if="{{searched && !list.length}}" title="没有找到相关提示词" desc="换个关键词，或去掉分类筛选" />
+  </view>
+</view>

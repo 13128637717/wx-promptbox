@@ -1,0 +1,35 @@
+.bar {
+  display: flex;
+  align-items: center;
+  height: 80rpx;
+  padding: 0 24rpx;
+  border-radius: 999rpx;
+  background: #ffffff;
+  box-shadow: 0 8rpx 24rpx rgba(37, 99, 235, 0.05);
+}
+
+.icon {
+  width: 40rpx;
+  height: 40rpx;
+  margin-right: 8rpx;
+  flex-shrink: 0;
+  overflow: visible;
+}
+
+.input {
+  flex: 1;
+  height: 80rpx;
+  font-size: 28rpx;
+  color: #1f2937;
+}
+
+.holder {
+  color: #9ca3af;
+}
+
+.clear {
+  width: 40rpx;
+  text-align: center;
+  color: #9ca3af;
+  font-size: 36rpx;
+}

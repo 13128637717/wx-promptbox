@@ -1,0 +1,77 @@
+.hero {
+  padding-bottom: 48rpx;
+  background: linear-gradient(160deg, #60a5fa, #2563eb);
+  color: #ffffff;
+}
+
+.hero-bar {
+  display: flex;
+  align-items: center;
+  min-height: 88rpx;
+  padding-right: 32rpx;
+}
+
+.light {
+  color: #ffffff;
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 84rpx;
+  height: 84rpx;
+  margin-right: 20rpx;
+  border-radius: 24rpx;
+  background: rgba(255, 255, 255, 0.22);
+  flex-shrink: 0;
+}
+
+.hero-title {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.hero-desc {
+  margin-top: 4rpx;
+  font-size: 24rpx;
+  opacity: 0.9;
+}
+
+.panel {
+  margin-top: -24rpx;
+  padding: 12rpx 24rpx 40rpx;
+  border-radius: 28rpx 28rpx 0 0;
+  background: #f7f8fa;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16rpx 8rpx;
+}
+
+.count {
+  color: #9ca3af;
+  font-size: 22rpx;
+}
+
+.sorts text {
+  margin-left: 20rpx;
+  color: #6b7280;
+  font-size: 24rpx;
+}
+
+.sorts .on {
+  color: #2563eb;
+  font-weight: 650;
+}
+
+.tags {
+  margin-bottom: 12rpx;
+}
+
+.list {
+  padding-bottom: 24rpx;
+}

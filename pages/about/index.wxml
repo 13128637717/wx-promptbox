@@ -1,0 +1,18 @@
+<view class="page about">
+  <view class="logo">AI</view>
+  <view class="name">AI 提示词工具箱</view>
+  <view class="ver">版本 {{version}}</view>
+
+  <view class="card block">
+    <view class="title">产品介绍</view>
+    <view class="text">PromptBox 用来查找、填写、收藏和复制提示词。打开就能用，不需要注册，也不需要配置模型接口。</view>
+  </view>
+  <view class="card block">
+    <view class="title">使用帮助</view>
+    <view class="text">找到合适的提示词后点复制，再粘贴到你常用的 AI 产品里。带变量的提示词可以先填写，再复制生成后的正文。创建页会按你选的模板，把需求填进主题。</view>
+  </view>
+  <view class="card block">
+    <view class="title">隐私说明</view>
+    <view class="text">不登录，不上传你的提示词、收藏或使用记录。这些数据只存在这台设备的本地存储里。卸载小程序或清除微信数据后可能丢失，可先在数据管理里导出备份。</view>
+  </view>
+</view>

@@ -1,0 +1,81 @@
+page {
+  min-height: 100%;
+  background: #f7f8fa;
+  color: #1f2937;
+  font-size: 28rpx;
+  line-height: 1.5;
+}
+
+.page {
+  min-height: 100vh;
+  box-sizing: border-box;
+  background: #f7f8fa;
+}
+
+.card {
+  background: #ffffff;
+  border-radius: 24rpx;
+  box-shadow: 0 8rpx 28rpx rgba(37, 99, 235, 0.06);
+}
+
+.section-title {
+  margin: 36rpx 8rpx 20rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.muted {
+  color: #9ca3af;
+}
+
+.btn-primary {
+  height: 96rpx;
+  line-height: 96rpx;
+  text-align: center;
+  background: #2563eb;
+  color: #ffffff;
+  border-radius: 999rpx;
+  font-size: 32rpx;
+  font-weight: 600;
+}
+
+.btn-ghost {
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: center;
+  color: #2563eb;
+  font-size: 28rpx;
+}
+
+.chip-row {
+  white-space: nowrap;
+}
+
+.chip {
+  display: inline-block;
+  margin-right: 16rpx;
+  padding: 10rpx 24rpx;
+  border-radius: 999rpx;
+  background: #ffffff;
+  color: #6b7280;
+  font-size: 24rpx;
+}
+
+.chip.on {
+  background: #2563eb;
+  color: #ffffff;
+}
+
+.nav-back {
+  width: 64rpx;
+  height: 64rpx;
+  line-height: 60rpx;
+  text-align: center;
+  font-size: 48rpx;
+  color: #1f2937;
+}
+
+.safe-bottom {
+  padding-bottom: calc(24rpx + env(safe-area-inset-bottom));
+}

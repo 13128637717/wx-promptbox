@@ -1,0 +1,7 @@
+.mine {
+  padding: 24rpx 32rpx 48rpx;
+}
+
+.list {
+  margin-top: 24rpx;
+}

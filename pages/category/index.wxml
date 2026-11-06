@@ -1,0 +1,35 @@
+<view class="layout">
+  <scroll-view class="side" scroll-y>
+    <view
+      wx:for="{{categories}}"
+      wx:key="id"
+      class="side-item {{activeId === item.id ? 'on' : ''}}"
+      data-id="{{item.id}}"
+      bindtap="onPick"
+    >{{item.name}}</view>
+    <view class="side-pad"></view>
+  </scroll-view>
+  <scroll-view class="main" scroll-y>
+    <view class="toolbar">
+      <text class="count">共 {{total}} 条</text>
+      <view class="sorts">
+        <text class="{{sort === 'heat' ? 'on' : ''}}" data-sort="heat" bindtap="onSort">热度</text>
+        <text class="{{sort === 'latest' ? 'on' : ''}}" data-sort="latest" bindtap="onSort">最新</text>
+      </view>
+    </view>
+    <scroll-view class="chip-row tags" scroll-x wx:if="{{tags.length}}">
+      <text class="chip {{tag === '' ? 'on' : ''}}" data-tag="" bindtap="onTag">全部</text>
+      <text
+        wx:for="{{tags}}"
+        wx:key="*this"
+        class="chip {{tag === item ? 'on' : ''}}"
+        data-tag="{{item}}"
+        bindtap="onTag"
+      >{{item}}</text>
+    </scroll-view>
+    <view class="list">
+      <prompt-card wx:for="{{list}}" wx:key="id" prompt="{{item}}" bind:select="onSelect" />
+      <empty-state wx:if="{{!list.length}}" title="这个分类还没有提示词" desc="换一个分类，或创建一个自己的提示词" />
+    </view>
+  </scroll-view>
+</view>

@@ -1,0 +1,64 @@
+<view class="page profile">
+  <view class="user" bindtap="onEditName">
+    <view class="avatar">
+      <view class="antenna"></view>
+      <view class="hood">
+        <view class="face">
+          <view class="eye left"></view>
+          <view class="eye right"></view>
+          <view class="mouth"></view>
+        </view>
+      </view>
+      <view class="body"></view>
+    </view>
+    <view class="user-text">
+      <view class="name">{{nickname}}</view>
+      <view class="slogan">让 AI 为你的工作和生活提效</view>
+    </view>
+  </view>
+
+  <view class="stats">
+    <view class="stat card" bindtap="onFavorites">
+      <view class="stat-head">
+        <view class="stat-ico"><view class="star"></view></view>
+        <view class="stat-title">我的收藏</view>
+      </view>
+      <view class="stat-count">{{favoriteCount}} 条</view>
+    </view>
+    <view class="stat card" bindtap="onHistory">
+      <view class="stat-head">
+        <view class="rec"><view class="rec-glyph"></view></view>
+        <view class="stat-title">使用记录</view>
+      </view>
+      <view class="stat-count">{{historyCount}} 条</view>
+    </view>
+  </view>
+
+  <view class="menu card">
+    <block wx:for="{{menus}}" wx:key="id">
+      <button
+        wx:if="{{item.openType}}"
+        class="row-btn"
+        hover-class="row-hover"
+        open-type="{{item.openType}}"
+        data-id="{{item.id}}"
+        bindtap="onMenu"
+      >
+        <view class="row">
+          <template is="menuBody" data="{{item, mineCount, cacheSize}}" />
+        </view>
+      </button>
+      <view wx:else class="row" data-id="{{item.id}}" bindtap="onMenu">
+        <template is="menuBody" data="{{item, mineCount, cacheSize}}" />
+      </view>
+    </block>
+  </view>
+</view>
+
+<template name="menuBody">
+  <view class="glyph" style="background: {{item.tint}}; color: {{item.color}};">{{item.glyph}}</view>
+  <text class="row-label">{{item.label}}</text>
+  <text class="extra" wx:if="{{item.id === 'mine'}}">{{mineCount}} 条</text>
+  <text class="extra" wx:if="{{item.id === 'cache'}}">{{cacheSize}}</text>
+  <text class="arrow">›</text>
+</template>

@@ -1,0 +1,16 @@
+<view class="page splash" style="padding-top: {{statusBarHeight}}px;" bindtap="onEnter">
+  <view class="wave a"></view>
+  <view class="wave b"></view>
+  <view class="stage">
+    <view class="logo">
+      <mark name="cube" />
+    </view>
+    <view class="name">AI 提示词工具箱</view>
+    <view class="slogan">好的提示词 让 AI 更懂你</view>
+    <view class="floats">
+      <view class="float chat"><mark name="chat" ink="#22B8CF" /></view>
+      <view class="float user"><mark name="user" ink="#3B82F6" /></view>
+      <view class="float code"><mark name="code" ink="#22C55E" /></view>
+    </view>
+  </view>
+</view>

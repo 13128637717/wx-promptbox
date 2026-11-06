@@ -1,0 +1,43 @@
+<view class="page edit">
+  <view class="field card">
+    <view class="label">标题</view>
+    <input class="input" value="{{title}}" placeholder="提示词标题" bindinput="onTitle" />
+  </view>
+  <view class="field card">
+    <view class="label">简介</view>
+    <input class="input" value="{{description}}" placeholder="一句话说明用途" bindinput="onDescription" />
+  </view>
+  <view class="field card">
+    <view class="label">分类</view>
+    <picker mode="selector" range="{{categoryNames}}" value="{{categoryIndex}}" bindchange="onCategory">
+      <view class="picker">{{categoryNames[categoryIndex]}}</view>
+    </picker>
+  </view>
+  <view class="field card">
+    <view class="label">标签</view>
+    <input class="input" value="{{tagText}}" placeholder="用逗号分隔" bindinput="onTags" />
+  </view>
+  <view class="field card">
+    <view class="label">正文</view>
+    <textarea class="content" value="{{content}}" maxlength="-1" placeholder="用双花括号标出变量，例如：主题" bindinput="onContent" />
+  </view>
+
+  <view class="var-head">
+    <text>变量</text>
+    <text class="link" bindtap="addVar">添加</text>
+  </view>
+  <view class="field card" wx:for="{{variables}}" wx:key="key">
+    <input class="input" data-index="{{index}}" data-key="name" value="{{item.name}}" placeholder="{{namePlaceholder}}" bindinput="onVar" />
+    <input class="input" data-index="{{index}}" data-key="label" value="{{item.label}}" placeholder="显示名称" bindinput="onVar" />
+    <input class="input" data-index="{{index}}" data-key="defaultValue" value="{{item.defaultValue}}" placeholder="默认值，可空" bindinput="onVar" />
+    <view class="req-row">
+      <text>必填</text>
+      <switch checked="{{item.required}}" data-index="{{index}}" bindchange="onRequired" color="#2563EB" />
+      <text class="link" data-index="{{index}}" bindtap="removeVar">删除</text>
+    </view>
+  </view>
+
+  <view class="btn-primary" bindtap="onSave">保存</view>
+  <view class="btn-ghost" bindtap="onFav">{{favored ? '已收藏' : '收藏'}}</view>
+  <view class="btn-ghost danger" wx:if="{{id}}" bindtap="onDelete">删除</view>
+</view>

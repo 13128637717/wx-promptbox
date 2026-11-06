@@ -1,0 +1,48 @@
+<view class="page home" style="padding-top: {{statusBarHeight}}px;">
+  <view class="title">AI 提示词工具箱</view>
+  <view class="search" bindtap="onSearch">
+    <view class="search-ico"><mark name="search" ink="#9CA3AF" /></view>
+    <text>搜索提示词、场景或功能...</text>
+  </view>
+
+  <view class="banner">
+    <view class="banner-copy">
+      <view class="banner-title">从灵感到落地</view>
+      <view class="banner-sub">精选提示词，助你高效使用 AI</view>
+      <view class="banner-btn" bindtap="onFeatured">立即体验 →</view>
+    </view>
+    <view class="banner-art">
+      <mark name="cube" />
+    </view>
+  </view>
+
+  <view class="grid">
+    <view
+      class="cell"
+      wx:for="{{categories}}"
+      wx:key="id"
+      data-id="{{item.id}}"
+      bindtap="onCategory"
+    >
+      <view class="tile" style="background: {{item.tint}};">
+        <mark name="{{item.icon}}" ink="{{item.color}}" />
+      </view>
+      <text>{{item.name}}</text>
+    </view>
+    <view class="cell" data-id="all" bindtap="onCategory">
+      <view class="tile all">
+        <mark name="grid" ink="#3B82F6" />
+      </view>
+      <text>全部分类</text>
+    </view>
+  </view>
+
+  <view class="section-title">热门推荐</view>
+  <prompt-card
+    wx:for="{{hot}}"
+    wx:key="id"
+    prompt="{{item}}"
+    brief="{{true}}"
+    bind:select="onSelect"
+  />
+</view>

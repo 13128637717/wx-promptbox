@@ -1,0 +1,14 @@
+<view class="page fav">
+  <scroll-view class="chip-row cats" scroll-x>
+    <text class="chip {{categoryId === '' ? 'on' : ''}}" data-id="" bindtap="onCategory">全部</text>
+    <text
+      wx:for="{{categories}}"
+      wx:key="id"
+      class="chip {{categoryId === item.id ? 'on' : ''}}"
+      data-id="{{item.id}}"
+      bindtap="onCategory"
+    >{{item.name}}</text>
+  </scroll-view>
+  <prompt-card wx:for="{{list}}" wx:key="id" prompt="{{item}}" brief="{{true}}" show-more="{{true}}" bind:select="onSelect" bind:more="onMore" />
+  <empty-state wx:if="{{!list.length}}" title="还没有收藏" desc="在提示词详情里点收藏，之后会按时间排在这里" />
+</view>

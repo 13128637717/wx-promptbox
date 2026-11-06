@@ -1,0 +1,37 @@
+.history {
+  padding: 24rpx 32rpx 48rpx;
+}
+
+.bar {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20rpx;
+}
+
+.chips {
+  flex: 1;
+  min-width: 0;
+}
+
+.clear {
+  margin-left: 16rpx;
+  color: #2563eb;
+  font-size: 24rpx;
+  flex-shrink: 0;
+}
+
+.ops {
+  display: flex;
+  justify-content: flex-end;
+  margin: -8rpx 8rpx 24rpx;
+  color: #2563eb;
+  font-size: 24rpx;
+}
+
+.ops text {
+  margin-left: 28rpx;
+}
+
+.danger {
+  color: #dc2626;
+}

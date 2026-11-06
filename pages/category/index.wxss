@@ -1,0 +1,72 @@
+.layout {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  display: flex;
+  overflow: hidden;
+  background: #f7f8fa;
+}
+
+.side {
+  width: 180rpx;
+  height: 100%;
+  min-height: 0;
+  background: #ffffff;
+}
+
+.side-item {
+  padding: 28rpx 12rpx;
+  text-align: center;
+  color: #6b7280;
+  font-size: 24rpx;
+}
+
+.side-item.on {
+  background: #eff6ff;
+  color: #2563eb;
+  font-weight: 650;
+}
+
+.main {
+  flex: 1;
+  height: 100%;
+  min-width: 0;
+  min-height: 0;
+}
+
+.toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20rpx 24rpx 8rpx;
+}
+
+.count {
+  color: #9ca3af;
+  font-size: 22rpx;
+}
+
+.sorts text {
+  margin-left: 20rpx;
+  color: #6b7280;
+  font-size: 24rpx;
+}
+
+.sorts .on {
+  color: #2563eb;
+  font-weight: 650;
+}
+
+.tags {
+  padding: 8rpx 24rpx 12rpx;
+}
+
+.side-pad {
+  height: 24rpx;
+}
+
+.list {
+  padding: 8rpx 20rpx 48rpx;
+}

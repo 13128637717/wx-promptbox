@@ -1,0 +1,62 @@
+.editor {
+  padding: 24rpx 32rpx 64rpx;
+}
+
+.headline {
+  font-size: 36rpx;
+  font-weight: 700;
+}
+
+.hint {
+  margin: 12rpx 0 24rpx;
+  color: #9ca3af;
+  font-size: 24rpx;
+}
+
+.field {
+  margin-bottom: 16rpx;
+  padding: 24rpx;
+}
+
+.label {
+  margin-bottom: 12rpx;
+  font-size: 26rpx;
+  font-weight: 650;
+}
+
+.req {
+  color: #dc2626;
+}
+
+.input {
+  height: 72rpx;
+  font-size: 28rpx;
+}
+
+.block-title {
+  margin: 28rpx 8rpx 12rpx;
+  font-weight: 650;
+}
+
+.preview {
+  width: 100%;
+  min-height: 280rpx;
+  box-sizing: border-box;
+  padding: 24rpx;
+  font-size: 28rpx;
+  line-height: 1.6;
+}
+
+.manual {
+  margin-top: 12rpx;
+  color: #d97706;
+  font-size: 22rpx;
+}
+
+.btn-primary {
+  margin-top: 28rpx;
+}
+
+.row {
+  display: flex;
+}

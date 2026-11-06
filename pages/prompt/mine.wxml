@@ -1,0 +1,14 @@
+<view class="page mine">
+  <view class="btn-primary" bindtap="onCreate">新建提示词</view>
+  <view class="list">
+    <prompt-card
+      wx:for="{{list}}"
+      wx:key="id"
+      prompt="{{item}}"
+      show-more="{{true}}"
+      bind:select="onSelect"
+      bind:more="onMore"
+    />
+  </view>
+  <empty-state wx:if="{{!list.length}}" title="还没有自己的提示词" desc="可以新建，也可以在生成结果里保存" />
+</view>

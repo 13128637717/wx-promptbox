@@ -1,0 +1,14 @@
+<view class="bar">
+  <view class="icon"><mark name="search" ink="#9CA3AF" /></view>
+  <input
+    class="input"
+    value="{{value}}"
+    placeholder="{{placeholder}}"
+    placeholder-class="holder"
+    confirm-type="search"
+    focus="{{focus}}"
+    bindinput="onInput"
+    bindconfirm="onConfirm"
+  />
+  <text wx:if="{{value}}" class="clear" bindtap="onClear">×</text>
+</view>

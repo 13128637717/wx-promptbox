@@ -1,0 +1,22 @@
+<view class="card item" bindtap="onTap">
+  <view class="icon" style="background: {{prompt.categoryColor}};">
+    <mark name="{{prompt.categoryIcon || 'grid'}}" ink="#ffffff" />
+  </view>
+  <view class="body {{showMore ? 'has-more' : ''}}">
+    <view class="title-row">
+      <text class="title">{{prompt.title}}</text>
+      <text wx:if="{{prompt.source === 'user'}}" class="mine">我的</text>
+    </view>
+    <view wx:if="{{!brief}}" class="desc">{{prompt.description}}</view>
+    <view class="meta">
+      <text class="pill" style="color: {{prompt.categoryColor}}; background: {{prompt.categoryTint}};">{{prompt.categoryName}}</text>
+      <text wx:if="{{showHeat}}" class="heat">{{prompt.heatText}}</text>
+      <text wx:if="{{timeText}}" class="time">{{timeText}}</text>
+    </view>
+  </view>
+  <view wx:if="{{showMore}}" class="more" catchtap="onMore">
+    <view class="pip"></view>
+    <view class="pip"></view>
+    <view class="pip"></view>
+  </view>
+</view>

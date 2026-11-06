@@ -1,0 +1,67 @@
+{
+  "pages": [
+    "pages/splash/index",
+    "pages/home/index",
+    "pages/category/index",
+    "pages/favorite/index",
+    "pages/profile/index",
+    "pages/category/detail",
+    "pages/search/index",
+    "pages/prompt/detail",
+    "pages/prompt/editor",
+    "pages/prompt/create",
+    "pages/prompt/result",
+    "pages/prompt/mine",
+    "pages/prompt/edit",
+    "pages/history/index",
+    "pages/data/index",
+    "pages/about/index"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#F7F8FA",
+    "navigationBarTitleText": "AI 提示词工具箱",
+    "navigationBarTextStyle": "black",
+    "backgroundColor": "#F7F8FA",
+    "backgroundTextStyle": "dark"
+  },
+  "tabBar": {
+    "color": "#9CA3AF",
+    "selectedColor": "#2563EB",
+    "backgroundColor": "#FFFFFF",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/home/index",
+        "text": "首页",
+        "iconPath": "assets/tab/home.png",
+        "selectedIconPath": "assets/tab/home-active.png"
+      },
+      {
+        "pagePath": "pages/category/index",
+        "text": "分类",
+        "iconPath": "assets/tab/category.png",
+        "selectedIconPath": "assets/tab/category-active.png"
+      },
+      {
+        "pagePath": "pages/favorite/index",
+        "text": "收藏",
+        "iconPath": "assets/tab/favorite.png",
+        "selectedIconPath": "assets/tab/favorite-active.png"
+      },
+      {
+        "pagePath": "pages/profile/index",
+        "text": "我的",
+        "iconPath": "assets/tab/profile.png",
+        "selectedIconPath": "assets/tab/profile-active.png"
+      }
+    ]
+  },
+  "usingComponents": {
+    "prompt-card": "/components/prompt-card/index",
+    "empty-state": "/components/empty-state/index",
+    "search-bar": "/components/search-bar/index",
+    "mark": "/components/mark/index"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

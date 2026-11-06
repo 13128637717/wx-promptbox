@@ -1,0 +1,31 @@
+<view class="page editor" wx:if="{{missing}}">
+  <empty-state title="没有找到这条提示词" />
+</view>
+<view class="page editor" wx:else>
+  <view class="headline">{{title}}</view>
+  <view class="hint">同名变量只填一次。留空时使用默认值，必填项需要填写后才能复制。</view>
+
+  <view class="field card" wx:for="{{fields}}" wx:key="name">
+    <view class="label">{{item.label}}<text wx:if="{{item.required}}" class="req"> *</text></view>
+    <input
+      class="input"
+      data-name="{{item.name}}"
+      value="{{values[item.name]}}"
+      placeholder="{{item.defaultValue ? '默认：' + item.defaultValue : '请输入' + item.label}}"
+      bindinput="onField"
+    />
+  </view>
+  <empty-state wx:if="{{!fields.length}}" title="这条提示词没有变量" desc="可以直接复制正文" />
+
+  <view class="block-title">预览</view>
+  <textarea class="preview card" value="{{preview}}" maxlength="-1" bindinput="onPreview" />
+  <view class="manual" wx:if="{{manual}}">你已手动改过预览。再次修改变量不会覆盖它，点重置可恢复。</view>
+
+  <view class="btn-primary" wx:if="{{nextResult}}" bindtap="onGenerate">生成提示词</view>
+  <view class="btn-primary" wx:else bindtap="onCopy">复制提示词</view>
+  <view class="row">
+    <view class="btn-ghost" bindtap="onReset">重置</view>
+    <view class="btn-ghost" bindtap="onSave">保存到我的提示词</view>
+    <view class="btn-ghost" wx:if="{{nextResult}}" bindtap="onCopy">复制</view>
+  </view>
+</view>

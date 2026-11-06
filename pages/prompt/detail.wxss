@@ -1,0 +1,171 @@
+.detail {
+  padding: 24rpx 32rpx 48rpx;
+}
+
+.head {
+  display: block;
+  padding: 28rpx;
+}
+
+.head-row {
+  display: flex;
+  align-items: flex-start;
+}
+
+.icon {
+  width: 88rpx;
+  height: 88rpx;
+  margin-right: 20rpx;
+  border-radius: 24rpx;
+  flex-shrink: 0;
+}
+
+.head-main {
+  flex: 1;
+  min-width: 0;
+}
+
+.name {
+  font-size: 34rpx;
+  font-weight: 700;
+  color: #1f2937;
+}
+
+.desc {
+  margin-top: 20rpx;
+  color: #6b7280;
+  font-size: 24rpx;
+  line-height: 1.6;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  margin-top: 12rpx;
+}
+
+.pill {
+  padding: 4rpx 14rpx;
+  border-radius: 999rpx;
+  font-size: 22rpx;
+}
+
+.heat {
+  margin-left: 16rpx;
+  color: #9ca3af;
+  font-size: 22rpx;
+}
+
+.block-title {
+  margin: 32rpx 8rpx 16rpx;
+  font-size: 28rpx;
+  font-weight: 650;
+}
+
+.content {
+  padding: 28rpx;
+  border-radius: 24rpx;
+  background: #eef0f4;
+  white-space: pre-wrap;
+  color: #374151;
+  font-size: 28rpx;
+  line-height: 1.7;
+}
+
+.var-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 20rpx 8rpx 0;
+  color: #9ca3af;
+  font-size: 24rpx;
+}
+
+.link {
+  color: #2563eb;
+}
+
+.copy {
+  margin-top: 28rpx;
+}
+
+.ops {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 28rpx;
+}
+
+.op {
+  display: flex;
+  flex: 1;
+  width: 0;
+  flex-direction: column;
+  align-items: center;
+}
+
+.round {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44rpx;
+  height: 44rpx;
+  background: transparent;
+}
+
+.round.on {
+  background: transparent;
+}
+
+.op-text {
+  margin-top: 8rpx;
+  color: #6b7280;
+  font-size: 24rpx;
+  line-height: 1.2;
+}
+
+.share {
+  display: flex;
+  flex: 1;
+  width: 0;
+  flex-direction: column;
+  align-items: center;
+  min-height: 0;
+  margin: 0;
+  padding: 0;
+  border: none;
+  background: transparent;
+  line-height: 1.2;
+  font-size: 24rpx;
+  color: #6b7280;
+}
+
+.share::after {
+  border: none;
+}
+
+.user-ops {
+  display: flex;
+  margin-top: 32rpx;
+}
+
+.user-op {
+  flex: 1;
+  box-sizing: border-box;
+  height: 80rpx;
+  line-height: 76rpx;
+  text-align: center;
+  border-radius: 999rpx;
+  border: 2rpx solid #dbeafe;
+  background: #ffffff;
+  color: #2563eb;
+  font-size: 28rpx;
+  font-weight: 600;
+}
+
+.user-op + .user-op {
+  margin-left: 24rpx;
+}
+
+.user-op.danger {
+  color: #dc2626;
+  border-color: #fecaca;
+}

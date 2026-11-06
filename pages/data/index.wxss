@@ -1,0 +1,31 @@
+.data {
+  padding: 24rpx 32rpx 48rpx;
+}
+
+.block {
+  margin-bottom: 24rpx;
+  padding: 28rpx;
+}
+
+.title {
+  font-size: 32rpx;
+  font-weight: 700;
+}
+
+.desc {
+  margin: 12rpx 0 24rpx;
+  color: #6b7280;
+  font-size: 24rpx;
+}
+
+.note,
+.message {
+  color: #9ca3af;
+  font-size: 24rpx;
+  line-height: 1.6;
+}
+
+.message {
+  margin-top: 20rpx;
+  color: #1f2937;
+}

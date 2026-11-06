@@ -1,0 +1,63 @@
+<view class="page detail" wx:if="{{missing}}">
+  <empty-state title="没有找到这条提示词" />
+</view>
+<block wx:else>
+  <view class="page detail" wx:if="{{prompt}}">
+    <view class="head card">
+      <view class="head-row">
+        <view class="icon" style="background: {{prompt.categoryColor}};">
+          <mark name="{{prompt.categoryIcon || 'grid'}}" ink="#ffffff" />
+        </view>
+        <view class="head-main">
+          <view class="name">{{prompt.title}}</view>
+          <view class="meta">
+            <text class="pill" style="color: {{prompt.categoryColor}}; background: {{prompt.categoryTint}};">{{prompt.categoryName}}</text>
+            <text class="heat">{{prompt.heatText}}</text>
+          </view>
+        </view>
+      </view>
+      <view class="desc">{{prompt.description}}</view>
+    </view>
+
+    <view class="block-title">提示词内容</view>
+    <view class="content">{{prompt.content}}</view>
+
+    <view class="var-row" wx:if="{{fieldCount}}">
+      <text>包含 {{fieldCount}} 个变量</text>
+      <text class="link" bindtap="onFill">去填写</text>
+    </view>
+
+    <view class="btn-primary copy" bindtap="onCopy">复制提示词</view>
+
+    <view class="ops">
+      <view class="op" bindtap="onFav">
+        <view class="round {{favored ? 'on' : ''}}">
+          <mark wx:if="{{favored}}" name="star" solid="{{true}}" ink="#2563eb" />
+          <mark wx:else name="star" ink="#6b7280" />
+        </view>
+        <text class="op-text">{{favored ? '已收藏' : '收藏'}}</text>
+      </view>
+      <button class="op share" open-type="share" hover-class="none">
+        <view class="round">
+          <mark name="share" ink="#6b7280" />
+        </view>
+        <text class="op-text">分享</text>
+      </button>
+      <view class="op" bindtap="onHistory">
+        <view class="round">
+          <mark name="clock" ink="#6b7280" />
+        </view>
+        <text class="op-text">调用记录</text>
+      </view>
+    </view>
+
+    <view class="user-ops" wx:if="{{isUser}}">
+      <view class="user-op" bindtap="onEdit">编辑</view>
+      <view class="user-op danger" bindtap="onDelete">删除</view>
+    </view>
+
+    <view class="section-title">相关推荐</view>
+    <prompt-card wx:for="{{related}}" wx:key="id" prompt="{{item}}" brief="{{true}}" bind:select="onSelect" />
+    <empty-state wx:if="{{!related.length}}" title="暂无同分类推荐" />
+  </view>
+</block>

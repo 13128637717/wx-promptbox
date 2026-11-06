@@ -1,0 +1,14 @@
+<view class="page data">
+  <view class="card block">
+    <view class="title">导出</view>
+    <view class="desc">导出收藏和个人提示词。优先发送 JSON 文件；发不出去时会复制到剪贴板。</view>
+    <view class="btn-primary" bindtap="onExport">导出数据</view>
+  </view>
+  <view class="card block">
+    <view class="title">导入</view>
+    <view class="desc">从聊天记录选择以前导出的 JSON。格式不对或写入失败时，不会覆盖现有收藏和个人提示词。相同编号会保留本地已有内容。</view>
+    <view class="btn-primary" bindtap="onImport">导入 JSON</view>
+  </view>
+  <view class="note">选择文件和发送文件需要较新的微信基础库。数据只保存在这台设备上。</view>
+  <view class="message" wx:if="{{message}}">{{message}}</view>
+</view>
