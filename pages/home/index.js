@@ -6,6 +6,7 @@ const ui = require('../../utils/ui.js')
 Page({
   data: {
     statusBarHeight: 20,
+    navBarHeight: 64,
     categories: [],
     hot: []
   },

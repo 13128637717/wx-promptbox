@@ -9,6 +9,18 @@
       bindtap="onCategory"
     >{{item.name}}</text>
   </scroll-view>
-  <prompt-card wx:for="{{list}}" wx:key="id" prompt="{{item}}" brief="{{true}}" show-more="{{true}}" bind:select="onSelect" bind:more="onMore" />
+  <view class="sheet" wx:if="{{list.length}}">
+    <prompt-card
+      wx:for="{{list}}"
+      wx:key="id"
+      prompt="{{item}}"
+      brief="{{true}}"
+      show-more="{{true}}"
+      plain="{{true}}"
+      last="{{index === list.length - 1}}"
+      bind:select="onSelect"
+      bind:more="onMore"
+    />
+  </view>
   <empty-state wx:if="{{!list.length}}" title="还没有收藏" desc="在提示词详情里点收藏，之后会按时间排在这里" />
 </view>

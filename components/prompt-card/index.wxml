@@ -1,10 +1,12 @@
-<view class="card item" bindtap="onTap">
+<view class="item {{plain ? 'plain' : 'card'}} {{plain && !last ? 'line' : ''}}" bindtap="onTap">
   <view class="icon" style="background: {{prompt.categoryColor}};">
     <mark name="{{prompt.categoryIcon || 'grid'}}" ink="#ffffff" />
   </view>
   <view class="body {{showMore ? 'has-more' : ''}}">
     <view class="title-row">
-      <text class="title">{{prompt.title}}</text>
+      <view class="title-wrap">
+        <text class="title">{{prompt.title}}</text>
+      </view>
       <text wx:if="{{prompt.source === 'user'}}" class="mine">我的</text>
     </view>
     <view wx:if="{{!brief}}" class="desc">{{prompt.description}}</view>

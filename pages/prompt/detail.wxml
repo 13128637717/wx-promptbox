@@ -56,8 +56,21 @@
       <view class="user-op danger" bindtap="onDelete">删除</view>
     </view>
 
-    <view class="section-title">相关推荐</view>
-    <prompt-card wx:for="{{related}}" wx:key="id" prompt="{{item}}" brief="{{true}}" bind:select="onSelect" />
-    <empty-state wx:if="{{!related.length}}" title="暂无同分类推荐" />
+    <view class="sheet" wx:if="{{related.length}}">
+      <view class="sheet-title">相关推荐</view>
+      <prompt-card
+        wx:for="{{related}}"
+        wx:key="id"
+        prompt="{{item}}"
+        brief="{{true}}"
+        plain="{{true}}"
+        last="{{index === related.length - 1}}"
+        bind:select="onSelect"
+      />
+    </view>
+    <block wx:else>
+      <view class="section-title">相关推荐</view>
+      <empty-state title="暂无同分类推荐" />
+    </block>
   </view>
 </block>

@@ -19,6 +19,14 @@ Component({
     showMore: {
       type: Boolean,
       value: false
+    },
+    plain: {
+      type: Boolean,
+      value: false
+    },
+    last: {
+      type: Boolean,
+      value: false
     }
   },
   methods: {

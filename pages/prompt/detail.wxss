@@ -2,6 +2,21 @@
   padding: 24rpx 32rpx 48rpx;
 }
 
+.sheet {
+  margin-top: 36rpx;
+  padding: 28rpx 12rpx 8rpx;
+  border-radius: 32rpx;
+  background: #ffffff;
+  box-shadow: 0 8rpx 28rpx rgba(37, 99, 235, 0.04);
+}
+
+.sheet-title {
+  margin: 0 16rpx 4rpx;
+  font-size: 32rpx;
+  font-weight: 700;
+  color: #1f2937;
+}
+
 .head {
   display: block;
   padding: 28rpx;

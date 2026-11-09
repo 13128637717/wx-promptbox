@@ -9,7 +9,7 @@
     >{{item.name}}</view>
     <view class="side-pad"></view>
   </scroll-view>
-  <scroll-view class="main" scroll-y>
+  <view class="main">
     <view class="toolbar">
       <text class="count">共 {{total}} 条</text>
       <view class="sorts">
@@ -27,9 +27,20 @@
         bindtap="onTag"
       >{{item}}</text>
     </scroll-view>
-    <view class="list">
-      <prompt-card wx:for="{{list}}" wx:key="id" prompt="{{item}}" bind:select="onSelect" />
-      <empty-state wx:if="{{!list.length}}" title="这个分类还没有提示词" desc="换一个分类，或创建一个自己的提示词" />
-    </view>
-  </scroll-view>
+    <scroll-view class="feed" scroll-y>
+      <view class="list">
+        <view class="sheet" wx:if="{{list.length}}">
+          <prompt-card
+            wx:for="{{list}}"
+            wx:key="id"
+            prompt="{{item}}"
+            plain="{{true}}"
+            last="{{index === list.length - 1}}"
+            bind:select="onSelect"
+          />
+        </view>
+        <empty-state wx:if="{{!list.length}}" title="这个分类还没有提示词" desc="换一个分类，或创建一个自己的提示词" />
+      </view>
+    </scroll-view>
+  </view>
 </view>

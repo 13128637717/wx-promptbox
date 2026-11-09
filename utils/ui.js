@@ -1,7 +1,12 @@
 function attachNav(page) {
   const app = getApp()
-  const height = app && app.globalData ? app.globalData.statusBarHeight : 20
-  page.setData({ statusBarHeight: height || 20 })
+  const globalData = app && app.globalData ? app.globalData : {}
+  const statusBarHeight = globalData.statusBarHeight || 20
+  const navBarHeight = globalData.navBarHeight || statusBarHeight + 44
+  page.setData({
+    statusBarHeight: statusBarHeight,
+    navBarHeight: navBarHeight
+  })
 }
 
 function backOrHome() {

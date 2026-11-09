@@ -1,5 +1,7 @@
-<view class="page home" style="padding-top: {{statusBarHeight}}px;">
+<view class="topbar" style="padding-top: {{statusBarHeight}}px;">
   <view class="title">AI 提示词工具箱</view>
+</view>
+<view class="page home" style="padding-top: {{navBarHeight}}px;">
   <view class="search" bindtap="onSearch">
     <view class="search-ico"><mark name="search" ink="#9CA3AF" /></view>
     <text>搜索提示词、场景或功能...</text>
@@ -19,6 +21,7 @@
   <view class="grid">
     <view
       class="cell"
+      hover-class="cell-on"
       wx:for="{{categories}}"
       wx:key="id"
       data-id="{{item.id}}"
@@ -29,7 +32,7 @@
       </view>
       <text>{{item.name}}</text>
     </view>
-    <view class="cell" data-id="all" bindtap="onCategory">
+    <view class="cell" hover-class="cell-on" data-id="all" bindtap="onCategory">
       <view class="tile all">
         <mark name="grid" ink="#3B82F6" />
       </view>
@@ -37,12 +40,16 @@
     </view>
   </view>
 
-  <view class="section-title">热门推荐</view>
-  <prompt-card
-    wx:for="{{hot}}"
-    wx:key="id"
-    prompt="{{item}}"
-    brief="{{true}}"
-    bind:select="onSelect"
-  />
+  <view class="hot">
+    <view class="hot-title">热门推荐</view>
+    <prompt-card
+      wx:for="{{hot}}"
+      wx:key="id"
+      prompt="{{item}}"
+      brief="{{true}}"
+      plain="{{true}}"
+      last="{{index === hot.length - 1}}"
+      bind:select="onSelect"
+    />
+  </view>
 </view>

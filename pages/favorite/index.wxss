@@ -10,3 +10,10 @@
   margin-right: 12rpx;
   padding: 8rpx 22rpx;
 }
+
+.sheet {
+  padding: 8rpx 12rpx;
+  border-radius: 32rpx;
+  background: #ffffff;
+  box-shadow: 0 8rpx 28rpx rgba(37, 99, 235, 0.04);
+}
